@@ -15,45 +15,40 @@
 ]]
 
 PIXEL.F4.Config = {
-    MenuTitle = "PIXEL DarkRP",
-    SidebarLogo = "YCRtBVO",
+    MenuTitle = "MC Médieval",
+    SidebarLogo = "IkuO564",
     Announcement = false,
     WebsiteLinks = {
         [1] = {
-            Name = "Rewards",
+            Name = "#page.rewards",
             ChatCommand = "!rewards",
             ImgurID = "HxsUUz2"
         },
         [2] = {
-            Name = "Rules",
-            Link = "https://google.com",
-            ImgurID = "0aWOlMI"
-        },
-        [3] = {
-            Name = "Discord",
+            Name = "#page.discord",
             Link = "https://google.com",
             ImgurID = "EtvPE3C"
         },
-        [4] = {
-            Name = "Forum",
+        [3] = {
+            Name = "#page.forum",
             Link = "https://google.com",
             ImgurID = "8ey54bc"
         },
-        [5] = {
-            Name = "Shop",
+        [4] = {
+            Name = "#page.shop",
             Link = "https://google.com",
             ImgurID = "jbp3ZT5"
         }
     },
     Commands = {
         {
-            Name = "Sell All Doors",
+            Name = "#commands.sell_all_doors",
             Func = function()
                 RunConsoleCommand("say", "/sellalldoors")
             end
         },
         {
-            Name = "Drop Money",
+            Name = "#commands.drop_money",
             Func = function()
                 PIXEL.F4.ToggleMenu()
                 Derma_StringRequest("Drop Money", "Drop an amount of money:", "100", function(txt)
@@ -62,7 +57,7 @@ PIXEL.F4.Config = {
             end
         },
         {
-            Name = "Change Name",
+            Name = "#commands.change_name",
             Func = function()
                 PIXEL.F4.ToggleMenu()
                 Derma_StringRequest("Change Name", "Change your Roleplay name (Leave Blank for your Steam name):", LocalPlayer():Nick(), function(txt)

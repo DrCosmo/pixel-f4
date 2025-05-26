@@ -20,7 +20,7 @@ local PANEL = {}
 
 function PANEL:Init()
     self.Entry = vgui.Create("PIXEL.TextEntry", self)
-    self.Entry:SetPlaceholderText("Search...")
+    self.Entry:SetPlaceholderText("#searchbar.text")
     self.Entry.IconCol = PIXEL.CopyColor(colors.Icon)
 
     function self.Entry:PaintOver(w, h)

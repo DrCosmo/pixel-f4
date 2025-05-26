@@ -32,8 +32,8 @@ function PANEL:Init()
 	self.LeftCat = vgui.Create("PIXEL.ScrollPanel", self.LeftPnl)
 	self.RightCat = vgui.Create("PIXEL.ScrollPanel", self.RightPnl)
 
-	self.LeftPnl.Title = "Laws"
-	self.RightPnl.Title = "Commands"
+	self.LeftPnl.Title = "#laws.title"
+	self.RightPnl.Title = "#commands.title"
 
 	local lawTableIsEmpty = (#DarkRP.getLaws()) == 0
 	function self.LeftPnl:Paint(w,h)
@@ -186,7 +186,7 @@ function PANEL:GenerateItems(l, r, dontRefreshCommands)
 
 		function p:DoClick()
 			v.Func()
-			notification.AddLegacy("Ran " .. v.Name, NOTIFY_GENERIC, 3)
+			notification.AddLegacy(language.GetPhrase("#commands.ran") .. language.GetPhrase(v.Name), NOTIFY_GENERIC, 3)
 		end
 
 		function p:PaintExtra(w,h)

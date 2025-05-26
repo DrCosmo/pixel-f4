@@ -36,7 +36,7 @@ function PANEL:Init()
     playersOnline:AddSegment(nil, onlineAng, PIXEL.F4.Colors.PlayersChartOnline)
     playersOnline:AddSegment(nil, 360 - onlineAng, PIXEL.F4.Colors.PlayersChartOffline)
 
-    local plyTitleTable = {"Players Online", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
+    local plyTitleTable = {"#charts.player_online", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
     local plySubTitleTable = {plyCount .. "/" .. maxPlys, "F4.ChartsStat", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
 
     function playersOnline:PaintOver(w, h)
@@ -65,7 +65,7 @@ function PANEL:Init()
         local centerX, centerY = w / 2, h / 2
         local diameter = math.min(w, h) - PIXEL.Scale(15)
         PIXEL.DrawCircle(centerX - diameter / 2, centerY - diameter / 2, diameter, diameter, overlayCol)
-        PIXEL.DrawShadowText("Job Distribution", "F4.ChartsName", w / 2, h / 2, PIXEL.F4.Colors.ChartLabel, 1, 1, PIXEL.Scale(2))
+        PIXEL.DrawShadowText("#charts.job_distribution", "F4.ChartsName", w / 2, h / 2, PIXEL.F4.Colors.ChartLabel, 1, 1, PIXEL.Scale(2))
     end
 
     table.insert(self.Charts, jobDistribution)
@@ -80,7 +80,7 @@ function PANEL:Init()
         self.CachedCircle = PIXEL.PrecacheArc(centerX, centerY, segRadius, segRadius, 0, 360, 3)
     end
 
-    local moneyTitleTable = {"Total Money", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
+    local moneyTitleTable = {"#charts.total_money", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
     local moneySubTitleTable = {PIXEL.FormatMoney(0), "F4.ChartsStat", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
 
     local lerp = Lerp

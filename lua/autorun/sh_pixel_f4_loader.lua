@@ -14,6 +14,11 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ]]
 
+if SERVER then
+    resource.AddSingleFile("resource/localization/fr/pixel_f4.properties")
+    resource.AddSingleFile("resource/localization/en/pixel_f4.properties")
+end
+
 PIXEL = PIXEL or {}
 PIXEL.F4 = PIXEL.F4 or {}
 PIXEL.F4.Frame = PIXEL.F4.Frame or {

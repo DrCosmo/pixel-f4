@@ -31,10 +31,12 @@ function PANEL:Init()
 
     local sidebar = self:CreateSidebar("Dashboard", PIXEL.F4.Config.SidebarLogo, nil, PIXEL.Scale(10), PIXEL.Scale(20))
 
-    sidebar:AddItem("Dashboard", "Dashboard", "dkErdSv", function() self:ChangeTab("PIXEL.F4.Dashboard", "Dashboard") end)
-    sidebar:AddItem("Jobs", "Jobs", "v5e4tGV", function() self:ChangeTab("PIXEL.F4.Jobs", "Jobs") end)
-    sidebar:AddItem("Entities", "Entities", "Be1LD3X", function() self:ChangeTab("PIXEL.F4.Entities", "Entities") end)
-    sidebar:AddItem("Weapons", "Weapons", "tMz2fGT", function() self:ChangeTab("PIXEL.F4.Weapons", "Weapons") end)
+    sidebar:AddItem("#page.dashboard", "#page.dashboard", "dkErdSv", function() self:ChangeTab("PIXEL.F4.Dashboard", "Dashboard") end)
+    sidebar:AddItem("#page.jobs", "#page.jobs", "v5e4tGV", function() self:ChangeTab("PIXEL.F4.Jobs", "Jobs") end)
+    sidebar:AddItem("#page.entity", "#page.entity", "Be1LD3X", function() self:ChangeTab("PIXEL.F4.Entities", "Entities") end)
+    sidebar:AddItem("#page.weapons", "#page.weapons", "tMz2fGT", function() self:ChangeTab("PIXEL.F4.Weapons", "Weapons") end)
+	sidebar:AddItem("#page.rules", "#page.rules", "0aWOlMI", function() self:ChangeTab("PIXEL.F4.Rules", "Rules") end)
+
 
     local add = function(idname, imgur, pnl)
         sidebar:AddItem(idname, idname, imgur, function() self:ChangeTab(pnl, id) end)
